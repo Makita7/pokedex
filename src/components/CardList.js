@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Card from "./Card";
-import Btn from "./Btn";
 
 export const CardList = () =>{
     const [ pokeInfo, setPokemonInfo ] = useState([]);
@@ -43,8 +42,22 @@ export const CardList = () =>{
         <Card pokemon={pokeInfo} loading={loading}/>
       </div>
       <div className="btnContainer center">
-        <Btn name="Next" />
-        <Btn name="Prev" />
+            <button className="btn" onClick={() =>{
+              setPokemonInfo([])
+              setUrl(prevUrl)
+          }}>
+
+              Previous
+          </button>
+          
+          <button className="btn" onClick={() =>{
+                setPokemonInfo([])
+                setUrl(nextUrl)
+            }}>
+
+                Next
+          </button>
+
       </div>
     </div>
   );

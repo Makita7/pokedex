@@ -1,38 +1,93 @@
-.App {
+/* GENERAL */
+.container {
+  width: 100%;
+}
+
+.padLeft{
+  padding-left: 2rem;
+}
+
+.mid{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.text-center{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-items: center;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* HEADER */
+.headerBack{
+  background-color: brown;
+  height: 10rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo{
+  height: 7.5rem;
+  padding-top: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CARDS */
+.cardList{
+  margin: 1rem;
+  justify-content: space-between;
+}
+
+.card{
+  width: 15rem!important;
+  height: auto;
+  background-color: rgb(235, 235, 235);
+  text-align: center;
+  border-radius: 10px;
+  margin: 0.5rem;
+}
+
+.id{
+  padding-top: 1rem;
+  padding-right: 0.5rem;
+  color: rgb(124, 112, 112);
+}
+
+.flexbox{
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap !important;
+}
+
+/* SEARCH BAR & BUTTONS */
+input{
+  width: 40rem;
+  height: 1.8rem;
+  border-radius: 8px;
+  border-color: rgb(182, 182, 182);
+  border-width: 0.5px;
+  color: rgb(199, 199, 199);
+  margin-top: 2rem;
+}
+
+.btnContainer{
+  display: flex;
+}
+
+.btn{
+  margin: 1rem;
+  background-color: rgb(29, 29, 29);
+  padding: 0.5rem 1rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: aliceblue;
+  border-radius: 8px;
+  border: 0;
 }

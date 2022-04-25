@@ -1,17 +1,23 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Card from "./Card";
+import Btn from "./Btn";
 
 export const CardList = () =>{
     const [ pokeInfo, setPokemonInfo ] = useState([]);
     const [ loading, setLoading ] = useState();
     const [ url, setUrl ] = useState('https://pokeapi.co/api/v2/pokemon');
+    const [ nextUrl, setNextUrl ] = useState();
+    const [ prevUrl, setPrevtUrl ] = useState();
 
     const FetchData = async () => {
       //res short for response
       setLoading(true);
       const res = await axios.get(url);
       getData(res.data.results);
+      console.log(res.data.results)
+      setNextUrl(res.data.next);
+      setPrevtUrl(res.data.previous);
       setLoading(false);
     }
 
@@ -32,9 +38,15 @@ export const CardList = () =>{
     }, []);
 
   return(
-    <>
-      <Card pokemon={pokeInfo} loading={loading}/>
-    </>
+    <div className="">
+      <div className="cardList flexbox">
+        <Card pokemon={pokeInfo} loading={loading}/>
+      </div>
+      <div className="btnContainer center">
+        <Btn name="Next" />
+        <Btn name="Prev" />
+      </div>
+    </div>
   );
 }
 

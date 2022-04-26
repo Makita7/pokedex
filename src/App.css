@@ -142,9 +142,14 @@ input{
 
 .moreInfo p{
   text-align: left;
+  padding-left: 1rem;
 }
 
 .abilities{
   list-style: none;
   text-align: left;
+}
+
+.statpad{
+  padding-top: 5rem;
 }

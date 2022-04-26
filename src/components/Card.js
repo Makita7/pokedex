@@ -1,6 +1,6 @@
 
 
-const Card = ({pokemon, loading}) => {
+const Card = ({ pokemon, loading, infoPokemon }) => {
   //console.log(pokemon);
 
   return (
@@ -9,7 +9,7 @@ const Card = ({pokemon, loading}) => {
           loading ? <h1>Loading...</h1> : 
           pokemon.map((item) => {
             return(
-                <div className="card" key={item.id}>
+                <div className="card"  onClick={() => infoPokemon(item)}>
                     <div className="flexbox center">
                       <h3 className="id">{item.id}</h3> 
                       <h1>{item.name}</h1>
@@ -25,3 +25,5 @@ const Card = ({pokemon, loading}) => {
 
 
 export default Card;
+
+//key={item.id}

@@ -12,7 +12,7 @@ function App() {
     <div className='container'>
         <Header/>
         <SearchBar/>
-        <MoreInfo/>
+        {/* <MoreInfo/> */}
         <CardList/>
     </div>
   );

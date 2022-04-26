@@ -12,7 +12,6 @@ function App() {
     <div className='container'>
         <Header/>
         <SearchBar/>
-        {/* <MoreInfo/> */}
         <CardList/>
     </div>
   );

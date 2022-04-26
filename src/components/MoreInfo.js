@@ -9,7 +9,7 @@ const MoreInfo = ({ data }) => {
         
         <div className="flexbox">
             <div className="col">
-                <img src={data.sprites.front_default} alt="eevee"/>
+                <img src={data.sprites.front_default} alt={data.name}/>
             </div>
 
             <div className="padTop col">
@@ -20,7 +20,7 @@ const MoreInfo = ({ data }) => {
                             <p>Type:{pokemon.type}</p>
                         })
                     }
-                    <p>Abilities:</p>
+                    <p><strong>Abilities:</strong></p>
                         {
                             data.abilities.map(pokemon =>{
                                 return(
@@ -32,7 +32,7 @@ const MoreInfo = ({ data }) => {
                         }
                     
                         
-                        <p>Weight: {data.weight}</p>
+                        <p><strong>Weight:</strong> {data.weight}</p>
                 </div>
             </div>
 
@@ -41,7 +41,7 @@ const MoreInfo = ({ data }) => {
                             data.stats.map(pokemon => {
                                 return(
                                     <>
-                                        <p>{pokemon.stat.name}:{pokemon.base_stat}</p>
+                                        <p><strong>{pokemon.stat.name}</strong>: {pokemon.base_stat}</p>
                                     </>
                                 );
                             })

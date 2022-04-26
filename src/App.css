@@ -1,4 +1,8 @@
 /* GENERAL */
+#root{
+  cursor: pointer;
+}
+
 .container {
   width: 100%;
 }
@@ -48,11 +52,35 @@
 
 .card{
   width: 15rem!important;
-  height: auto;
+  height: 15rem!important;
   background-color: rgb(235, 235, 235);
   text-align: center;
   border-radius: 10px;
   margin: 0.5rem;
+}
+
+.card:hover{
+  transition: 1s ease-in-out;
+  transform: scale(1.2);
+}
+
+.card img{
+  padding-top: 1rem;
+  height: 7rem;
+}
+
+
+.card img:hover{
+  transition: 1s ease;
+  transition-delay: 50ms;
+  transition-timing-function: ease !important;
+  transition-property: all;
+  transform: scale(1.2);
+}
+
+.card h1:hover{
+  transition: 1s ease;
+  color: brown;
 }
 
 .id{
@@ -74,7 +102,7 @@ input{
   border-radius: 8px;
   border-color: rgb(182, 182, 182);
   border-width: 0.5px;
-  color: rgb(199, 199, 199);
+  color: rgb(44, 44, 44);
   margin-top: 2rem;
 }
 
@@ -90,4 +118,33 @@ input{
   color: aliceblue;
   border-radius: 8px;
   border: 0;
+  cursor: pointer;
+}
+
+.icon{
+  font-size: 2rem;
+  vertical-align: middle !important;
+}
+
+/* MORE INFO */
+
+.col{
+  min-width: 20rem;
+}
+
+.moreInfo img{
+  height: 20rem;
+}
+
+.padTop{
+  padding-top: 2rem;
+}
+
+.moreInfo p{
+  text-align: left;
+}
+
+.abilities{
+  list-style: none;
+  text-align: left;
 }

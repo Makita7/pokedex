@@ -44,7 +44,10 @@ export const CardList = () =>{
       <div className="btnContainer center">
             <button className="btn" onClick={() =>{
               setPokemonInfo([])
+              setLoading(true);
               setUrl(prevUrl)
+              console.log(prevUrl);
+              setLoading(false);
           }}>
 
               Previous

@@ -1,4 +1,4 @@
-
+import { BsFillFilterSquareFill } from 'react-icons/bs';
 
 function SearchBar() {
   return (
@@ -6,6 +6,7 @@ function SearchBar() {
         <div className="center">
             <input placeholder="Pokemon Name"/>
             <button className="btn">Search</button>
+            <BsFillFilterSquareFill className='icon'/>
         </div>
     </div>
   );

@@ -9,7 +9,7 @@ const Card = ({ pokemon, loading, infoPokemon }) => {
           loading ? <h1>Loading...</h1> : 
           pokemon.map((item) => {
             return(
-                <div className="card"  onClick={() => infoPokemon(item)}>
+                <div className="card" key={item.id} onClick={() => infoPokemon(item)}>
                     <div className="flexbox center">
                       <h3 className="id">{item.id}</h3> 
                       <h1>{item.name}</h1>

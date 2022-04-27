@@ -37,6 +37,7 @@ export const CardList = () =>{
 
     useEffect(() => {
       FetchData();
+      console.log('fire');
     }, []);
 
   return(
